@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../public/js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <audio controls></audio>
+    </div>
+    <div>
+        <label>
+            <select v-model="selectAudioDeviceIndex">
+                <option v-for="(v,i) in audioInputDevices" :value="i" :key="i">
+                    {{v.label}}
+                </option>
+            </select>
+        </label>
+    </div>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
